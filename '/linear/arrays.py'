@@ -1,0 +1,23 @@
+class Array:
+    def __init__(self, size):
+        self.size = size
+        self.data = [None] * size
+    
+    def insert(self, index, value):
+        if 0 <= index < self.size:
+            self.data[index] = value
+    
+    def get(self, index):
+        if 0 <= index < self.size:
+            return self.data[index]
+        return None
+    
+    def delete(self, index):
+        if 0 <= index < self.size:
+            self.data[index] = None
+
+# Example usage
+arr = Array(5)
+arr.insert(0, 10)
+arr.insert(1, 20)
+print(arr.get(0))  # Output: 10
